@@ -123,16 +123,7 @@ button:hover{
 .btn{
     margin-top: 15px;
 
-}
 
-@media screen and (max-width:600px){
-    .cabeçalho-link {
-        display: none;
-        float: none;
-        text-align: center;
-        width: 100%;
-
-    }
 
     }
     @media screen and (max-width:768px) {
