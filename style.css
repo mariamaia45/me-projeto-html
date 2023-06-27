@@ -73,15 +73,15 @@ button{
     background: transparent;
     border:solid 1px #2ecc71;
     padding: 5px;
-    border-radius: 15px;
-    font-size: 12px;
+    border-radius: 12px;
+    font-size: 15px;
     cursor: pointer;
     width: 150px;
 }
 
 button:hover{
     background-color: #2ecc71;
-    color: #d2c6c6;
+    color: #2ecc71;
     transition: 0.5s;
 }
 
