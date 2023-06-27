@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+
+
+.background{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+   
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+   
+    
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;  
+}
+
+.cabeçalho-link a{
+    color: #fff;
+    font-size: 12px;
+}
+
+.cabeçalho-link a:hover{
+    color: #2ecc71;
+    transition: 0.3s all;
+}
+
+.logo i{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+button{
+    color: #2ecc71;
+    background: transparent;
+    border:solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 150px;
+}
+
+button:hover{
+    background-color: #2ecc71;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.container-text{
+    padding: 150px 0 0 130px;
+}
+
+.text h3{
+    color: #fff;
+    font-size: 10px;
+}
+
+.text h1{
+    color: #fff;
+    margin-top: 5px;
+}
+
+.text span{
+    color: #2ecc71; 
+}
+
+.text p{
+    color: #fff;
+    font-weight: 10px;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.redes-social{
+    margin-top: 10px;
+}
+
+.redes-social a{
+    color: #2ecc71;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+@media screen and (max-width:600px){
+    .cabeçalho-link {
+        display: none;
+    }
+    
+}
+button {
+
+background-color: #333;
+
+color: #333;
+
+padding: 10px 20px;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+.background{
+background-image: url("images-Aspose.Words.5579be72-4613-4578-8e91-db114f2d5f0a.001[53].png") ;
+height: 450px;
+width: 500px;
+}
+</style>
+</head>
+<body>
+</head>
+
+  <body>
+    <div class="background">
+        <header>
+            <div class="logo">
+             <a hre="https://www.facebook.com/100025904978069/posts/pfbid02hZznBkc5xG2jeV4c75conhxhBfqA6tEaiNCNz2NCkXDecUQ3qRqxpnNEwPLJS2Fml/?app=fbl"></a>
+
+        <div class="container-text">
+            <div class="text">
+                <h3>Ola, Pessoal</h3>
+                <h1>Eu sou <span>Maria Maia</span></h1>
+                <p>bem vindo a minha página</p>
+                <div class="redes-social">
+                <form><button><a href="https://www.facebook.com/profile.php?id=100025904978069">facebook</a></button></for>
+                <form><button><a href="https://instagram.com/maria_maia675?igshid=MzNlNGNkZWQ4Mg==">instragran</a></form></button>
+                </div>
+      <nav>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          
+            </div><!--text-->
+        </div><!--container-text-->
+    </div><!--background-->
+    <main></main>
+    <script>
+    class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
+    });
+  }
+
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+}
+
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li",
+);
+mobileNavbar.init();
+</script>
+
+
+
+    <script>
+    var typed = new typed("span",{
+    strings:["Elizabeth Elmiz.","web Developer.","UX Designer.","Photographer."],
+    typeSpeed: 70,
+    backSpeed: 60,
+    loop: true
+});
+</script>    
+</body>
+</html>
