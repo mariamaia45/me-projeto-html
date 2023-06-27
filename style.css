@@ -127,6 +127,9 @@ button:hover{
 @media screen and (max-width:600px){
     .cabeçalho-link {
         display: none;
+        float: none;
+        text-align: center;
+        width: 100%;
 
     }
 
