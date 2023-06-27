@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos de formulário com javascript</title>
+</head>
+<body>
+    <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone" size="50"><br><br>
+    <input type="password" id="senha" placeholder="Senha aqui...">
+    <br><br>
+    <label>Aperitivo? <input type="checkbox" id="aperit" checked="checked"></label>
+    <fieldset>
+    <legend>Sexo:</legend>
+        <label for="masc">Masculino:</label><input type="radio" name="sexo" value="M" id="masc">
+        <label for="fem">Feminino:</label><input type="radio" name="sexo" value="F" id="fem" checked="checked">
+    </fieldset>
+    <button id="btSexo">Ver</button>
+    <br>
+    <fieldset>
+        <legend>Hobbies:</legend>
+            <input type="checkbox" name="hobbies" value="futebol" id="fut"><label for="fut">Futebol</label>
+            <input type="checkbox" name="hobbies" value="natação" id="nat"><label for="nat">Natação</label>
+            <input type="checkbox" name="hobbies" value="cinema" id="cin"><label for="cin">Cinema</label>
+        </fieldset>
+        <br>
+    <label>Escreva uma mensagem:<br>
+    <textarea id="mensagem" name="mensagem" rows="10" cols="80">O que estiver aqui aparece dentro do campo</textarea></label>
+    <fieldset>
+        <legend>Estado:</legend>
+        <select name="estado" id="uf">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA" selected>Bahia</option>
+        </select>
+    </fieldset>
+    <p id="natural"></p>
+    <br>
+    Número: <input type="number" min="0" max=100 step="2">
+    <script src="scripts/scriptsform.js"></script>
+</body>
+</html>

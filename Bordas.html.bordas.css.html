@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Formatando Bordas com CSS</title>
+ <style>
+ div {
+     widht: 200px;
+     height : 100px;
+     margin : 10px;
+}
+     
+#div1 {
+    border-style : solid;
+    border-widht : thin;
+    border-color : red;
+    border-radius : 10px;
+}
+
+#div2 {
+    border-style : dotted;
+    border-color : yellow;
+    border-radius : 10px 30px;
+}
+
+#div3 {
+    border-style : dashed;
+    border-widht : 4px;
+    border-color : blue;
+    border-radius : 10px 20px 30px 40px;
+}
+
+#div4 {
+    border-style : double
+    border-widht : 8px;
+    border-color : green;
+    border-top-left-radius : 10px;
+    border-top-right-radius : 20px;
+    border-bottom-right-radius : 30px;
+    border-bottom-left-radius : 40px;
+}
+
+#div5 {
+    border-left-style : solid;
+    border-left-widht : thin;
+    border-left-color : red;
+    
+    border-style : dotted;
+    border-color : yellow;
+    
+    border-right-style : dashed;
+    border-right-widht : 4px;
+    border-right-color : blue;
+    
+    border-bottom-style : double;
+    border-bottom-widht : 8px;
+    border-bottom-color : green;
+}
+
+tabele, td {
+    font-size : xx-large;
+    border : 1px solid black;
+    margin : 10px;
+}
+
+#tabela1 {
+    border-collapse : collapse;
+}
+
+#tabele2 {
+    border-spacing : 20px;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ <div id="div1"></div>
+
+ <div id="div2"></div>
+
+ <div id="div3"></div>
+
+ <div id="div4"></div>
+
+ <div id="div5"></div>
+
+ <table id="tabela1">
+
+ <tr>
+
+ <td>K01</td>
+
+ <td>K02</td>
+
+ <td>K03</td>
+
+ </tr>
+
+ </table >
+
+ <table id="tabela2">
+ 
+ </body>
+ </html>

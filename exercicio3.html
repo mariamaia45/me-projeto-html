@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Conversor de texto para maiúsculas</title>
+</head>
+<body>
+<label for="texto">Digite um texto:</label>
+<input type="text" id="texto" onkeyup="converterTexto()">
+<br>
+<span id="qtdCaracteres"></span>
+<br>
+<p id="textoConvertido"></p>
+
+<script>
+function converterTexto() {
+var texto = document.getElementById("texto").value;
+var textoConvertido = texto.toUpperCase();
+document.getElementById("textoConvertido").innerHTML = textoConvertido;
+document.getElementById("qtdCaracteres").innerHTML = "Quantidade de caracteres: " + texto.length;
+}
+</script>
+</body>
+</html>
+

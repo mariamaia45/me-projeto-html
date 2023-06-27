@@ -1,0 +1,22 @@
+1.
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Calculadora de Cubo</title>
+</head>
+<body>
+ <label for="numero">Digite um número:</label>
+ <input type="number" id="numero" onchange="calcularCubo()">
+ <br>
+ <span id="resultado"></span>
+
+ <script>
+  function calcularCubo() {
+   var numero = document.getElementById("numero").value;
+   var cubo = numero * numero * numero;
+   document.getElementById("resultado").innerHTML = "O cubo de " + numero + " é " + cubo;
+  }
+ </script>
+</body>
+</html>
+
