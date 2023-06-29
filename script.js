@@ -4,3 +4,6 @@ var typed = new typed("span",{
   backSpeed: 60,
   loop: true
 });
+
+
+

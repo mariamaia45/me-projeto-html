@@ -2,7 +2,7 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
     font-family: "Poppins" , sans-serif;
     text-decoration: none;
@@ -17,12 +17,12 @@ body{
 
 .background{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-image: url(1687849951958[55].jpg);
+    background-image: url(1687849951958[55].jpg) ;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height:100svh;
-   
+    width: 100%;  
+    height: 100vh;
+
 }
 
 header{
@@ -128,7 +128,7 @@ button:hover{
     }
     @media screen and (max-width:768px) {
         section, aside {
-            width: 100%;
+            max-width: 100%;
             padding: 0;
         }  
     }
